@@ -15,7 +15,7 @@ require_once "reportCliente.php";
   */
 //if(isset($_GET['submit'])):
     $report = new reportCliente("css/estilo.css", "Relatório de Material de Escritório");
-    $report->BuildPDF(); // chama a construção do pdf.
+    $report->GeraPDF(); // chama a construção do pdf.
     $report->Exibir("Material de Escritório"); //nome do arquivo relatório que será salvo.
 //endif;
 ?>

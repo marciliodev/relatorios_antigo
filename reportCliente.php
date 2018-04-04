@@ -111,8 +111,10 @@ class reportCliente extends mpdf{
     /*
     * Método para construir o arquivo PDF
     */
-    public function BuildPDF(){
-        $this->pdf = new mPDF('utf-8', 'A4-L');
+    public function GeraPDF(){
+        $this->pdf = new mPDF('utf-8', 'A4');
+        $this->pdf->allow_charset_conversion=true;
+        $this->pdf->charset_in='iso-8859-1';
         //$this->pdf->charset_in='windows-1252';
         $this->pdf->WriteHTML($this->css, 1);
         $this->pdf->SetHTMLHeader($this->getHeader());
@@ -120,6 +122,7 @@ class reportCliente extends mpdf{
         $this->pdf->WriteHTML($this->getTabela());
         //$this->pdf->SetDisplayMode('fullpage');
         $this->pdf = new mPDF(['tempDir' => __DIR__ . '/tmp']);
+        ob_clean();
     }
 
     /*
