@@ -112,17 +112,21 @@ class reportCliente extends mpdf{
     * Método para construir o arquivo PDF
     */
     public function GeraPDF(){
+        set_time_limit(300); //seta o tempo limite de resposta para gerar o pdf
+        ini_set("memory_limit", "600M"); //seta a quantidade de memória usada pelo servidor
         $this->pdf = new mPDF('utf-8', 'A4');
+        //Trata caracteres especiais sem gerar erro
         $this->pdf->allow_charset_conversion=true;
         $this->pdf->charset_in='iso-8859-1';
-        //$this->pdf->charset_in='windows-1252';
+        $this->pdf->charset_in='windows-1252';
+        //Corpo do pdf
         $this->pdf->WriteHTML($this->css, 1);
         $this->pdf->SetHTMLHeader($this->getHeader());
         $this->pdf->SetHTMLFooter($this->getFooter());
         $this->pdf->WriteHTML($this->getTabela());
-        //$this->pdf->SetDisplayMode('fullpage');
+        $this->pdf->SetDisplayMode('fullpage');
         $this->pdf = new mPDF(['tempDir' => __DIR__ . '/tmp']);
-        ob_clean();
+        ob_clean(); //limpa o objeto dos dados do pdf
     }
 
     /*
