@@ -7,7 +7,7 @@
  * Time: 10:41
  */
 
-require_once "conexao/conexao.php";
+require_once "assents/conexao/conexao.php";
 require_once "MPDF/mpdf.php";
 
 class reportCliente extends mpdf{
@@ -61,7 +61,7 @@ class reportCliente extends mpdf{
     protected function getFooter(){
         $retorno = "<table class=\"tbl_footer\" width=\"1000\">  
                <tr>  
-                 <td align=\"left\"><a href=''>devwilliam.blogspot.com</a></td>  
+                 <td align=\"left\"><a href=''>#</a></td>  
                  <td align=\"right\">Página: {PAGENO}</td>  
                </tr>  
              </table>";
@@ -79,28 +79,21 @@ class reportCliente extends mpdf{
         $retorno .= "<h2 style=\"text-align:center\">{$this->titulo}</h2>";
         $retorno .= "<table border='1' width='1000' align='center'>  
            <tr class='header'>  
-             <th>Nome</td>  
-             <th>Telefone</td>  
-             <th>Idade</td>  
-             <th>Profissão</td>  
-             <th>E-mail</td>  
-             <th>Endereço</td>  
-             <th>Cidade</td>  
-             <th>Estado</td>  
+             <th>Discriminação Detalhada do Produto</td>  
+             <th>Estoque do Almoxarifado</td>  
+             <th>Estoque Total</td>  
+             <th>Valor Unitário</td>  
+             <th>Valor Total</td>  
            </tr>";
 
-        $sql = "SELECT * FROM TAB_CLIENTE";
+        $sql = "select * from produtos";
         foreach ($this->pdo->query($sql) as $reg):
             $retorno .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
-            $retorno .= "<td class='destaque'>{$reg['nome']}</td>";
-            $retorno .= "<td>{$reg['fone']}</td>";
-            $retorno .= "<td>{$reg['idade']}</td>";
-            $retorno .= "<td>{$reg['profissao']}</td>";
-            $retorno .= "<td>{$reg['email']}</td>";
-            $retorno .= "<td>{$reg['endereco']}</td>";
-            $retorno .= "<td>{$reg['cidade']}</td>";
-            $retorno .= "<td>{$reg['uf']}</td>";
-            $retorno .= "<tr>";
+            $retorno .= "<td class='destaque'>{$reg['disc_produto']}</td>";
+            $retorno .= "<td>{$reg['qt_total']}</td>"; //quantidade total do estoque
+            $retorno .= "<td>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
+            $retorno .= "<td>{$reg['vl_unitario']}</td>"; //valor unitário do produto
+            $retorno .= "<td>{$reg['vl_total']}</td>"; //valor total do produto
             $color = !$color;
         endforeach;
 
