@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7c9a5dd-d876-4183-ba5f-575e651c35e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/relatorio_material_escritorio.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relatorio_material_servico_vascular.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexao/Conexao.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/estilo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assents/logomarcas/NOVA LOGOMARCA.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reportCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/reportCliente.php" afterDir="false" />
     </list>
@@ -19,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reportCliente.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reportCliente.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reportCliente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-860">
-              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="219">
+              <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
               </folding>
@@ -31,29 +28,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="relatorio_material_escritorio.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/relatorio_material_escritorio.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="relatorio_material_servico_vascular.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/relatorio_material_servico_vascular.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="16" column="84" selection-start-line="16" selection-start-column="84" selection-end-line="16" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mpdf.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPDF/mpdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="812" column="9" selection-start-line="812" selection-start-column="9" selection-end-line="812" selection-end-column="9" />
+            <state relative-caret-position="-641">
+              <caret line="13933" column="9" selection-start-line="13933" selection-start-column="9" selection-end-line="13933" selection-end-column="9" />
+              <folding>
+                <element signature="e#68#72#0" expanded="true" />
+                <element signature="e#68#72#0" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Conexao.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assents/conexao/Conexao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -61,8 +54,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="520">
+              <caret line="31" column="71" lean-forward="true" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -103,10 +96,11 @@
         <option value="$PROJECT_DIR$/css/estilo.css" />
         <option value="$PROJECT_DIR$/conexao/conexao.php" />
         <option value="$PROJECT_DIR$/conexao/Conexao.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/reportCliente.php" />
         <option value="$PROJECT_DIR$/relatorio_material_escritorio.php" />
         <option value="$PROJECT_DIR$/relatorio_material_servico_vascular.php" />
+        <option value="$PROJECT_DIR$/assents/conexao/Conexao.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/reportCliente.php" />
       </list>
     </option>
   </component>
@@ -136,6 +130,17 @@
             <path>
               <item name="relatorios" type="b2602c69:ProjectViewProjectNode" />
               <item name="relatorios" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="relatorios" type="b2602c69:ProjectViewProjectNode" />
+              <item name="relatorios" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assents" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="relatorios" type="b2602c69:ProjectViewProjectNode" />
+              <item name="relatorios" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assents" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="conexao" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -186,18 +191,18 @@
       <workItem from="1522847669620" duration="405000" />
       <workItem from="1522848365108" duration="2883000" />
       <workItem from="1522851630574" duration="9642000" />
-      <workItem from="1522929039482" duration="6027000" />
+      <workItem from="1522929039482" duration="7671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23501000" />
+    <option name="totallyTimeSpent" value="25145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.39863843" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2118003" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -223,7 +228,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39863843" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2118003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -265,6 +270,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16240">
           <caret line="812" column="9" selection-start-line="812" selection-start-column="9" selection-end-line="812" selection-end-column="9" />
+          <folding>
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -370,6 +380,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="8296" selection-start-line="8296" selection-end-line="8296" />
+          <folding>
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -462,30 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MPDF/mpdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="812" column="9" selection-start-line="812" selection-start-column="9" selection-end-line="812" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reportCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-860">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/relatorio_material_servico_vascular.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -495,8 +486,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/relatorio_material_escritorio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="240">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assents/conexao/Conexao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPDF/mpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-641">
+          <caret line="13933" column="9" selection-start-line="13933" selection-start-column="9" selection-end-line="13933" selection-end-column="9" />
+          <folding>
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="31" column="71" lean-forward="true" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

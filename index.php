@@ -14,17 +14,23 @@ require_once "reportCliente.php";
   * e manda exibi-lo no navegador.
   */
 if(isset($_GET['submit'])):
-    $report = new reportCliente("assents/css/estilo.css", "Relatório de Material de Escritório");
-    $report->GeraPDF(); // chama a construção do pdf.
-    $report->Exibir("Material de Escritório"); //nome do arquivo relatório que será salvo.
+    if ($GET = "Material de Escritório") {
+        $report = new reportCliente("assents/css/estilo.css", "Relatório de Material de Escritório");
+        $report->GerarPDF_M_E(); // chama a construção do pdf.
+        $report->Exibir("Relatório de Material de Escritório"); //nome do arquivo relatório que será salvo.
+    }
+    if ($GET = "Material de Serviço Vascular"){
+        $report = new reportCliente("assents/css/estilo.css", "Relatório de Material de Serviço Vascular");
+        $report->GerarPDF_M_S_V(); // chama a construção do pdf.
+        $report->Exibir("Relatório de Material de Serviço Vascular"); //nome do arquivo relatório que será salvo.
+    }
 endif;
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Testando relatório com mPDF</title>
+    <title>Relatórios Almoxarifado</title>
 </head>
 <body>
 <form action="" method="GET" target="_blank">

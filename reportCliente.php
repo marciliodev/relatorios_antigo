@@ -74,10 +74,11 @@ class reportCliente extends mpdf{
     */
     private function getTabela(){
         $color  = false;
-        $retorno = "";
+        $conteudo_html = "";
 
-        $retorno .= "<h2 style=\"text-align:center\">{$this->titulo}</h2>";
-        $retorno .= "<table border='1' width='1000' align='center'>  
+        $conteudo_html .= "<h2 style=\"text-align:center\">{$this->titulo}</h2>";
+        $conteudo_html .= '<img src=\"assents/logomarcas/nova_logo_marca_1.jpg\" align=\"center\" width=\"150\" height=\"100\">';
+        $conteudo_html .= "<table border='1' width='1000' align='center'>
            <tr class='header'>  
              <th>Discriminação Detalhada do Produto</td>  
              <th>Estoque do Almoxarifado</td>  
@@ -88,23 +89,44 @@ class reportCliente extends mpdf{
 
         $sql = "select * from produtos";
         foreach ($this->pdo->query($sql) as $reg):
-            $retorno .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
-            $retorno .= "<td class='destaque'>{$reg['disc_produto']}</td>";
-            $retorno .= "<td>{$reg['qt_total']}</td>"; //quantidade total do estoque
-            $retorno .= "<td>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
-            $retorno .= "<td>{$reg['vl_unitario']}</td>"; //valor unitário do produto
-            $retorno .= "<td>{$reg['vl_total']}</td>"; //valor total do produto
+            $conteudo_html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
+            $conteudo_html .= "<td class='destaque'>{$reg['disc_produto']}</td>";
+            $conteudo_html .= "<td>{$reg['qt_total']}</td>"; //quantidade total do estoque
+            $conteudo_html .= "<td>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
+            $conteudo_html .= "<td>{$reg['vl_unitario']}</td>"; //valor unitário do produto
+            $conteudo_html .= "<td>{$reg['vl_total']}</td>"; //valor total do produto
             $color = !$color;
         endforeach;
 
-        $retorno .= "</table>";
-        return $retorno;
+        $conteudo_html .= "</table>";
+        return $conteudo_html;
     }
 
     /*
-    * Método para construir o arquivo PDF
+    * Método para construir o arquivo PDF de Material de Escritório
     */
-    public function GeraPDF(){
+    public function GerarPDF_M_E(){
+        set_time_limit(300); //seta o tempo limite de resposta para gerar o pdf
+        ini_set("memory_limit", "600M"); //seta a quantidade de memória usada pelo servidor
+        $this->pdf = new mPDF('utf-8', 'A4');
+        //Trata caracteres especiais sem gerar erro
+        $this->pdf->allow_charset_conversion=true;
+        $this->pdf->charset_in='iso-8859-1';
+        $this->pdf->charset_in='windows-1252';
+        //Corpo do pdf
+        $this->pdf->WriteHTML($this->css, 1);
+        $this->pdf->SetHTMLHeader($this->getHeader());
+        $this->pdf->SetHTMLFooter($this->getFooter());
+        $this->pdf->WriteHTML($this->getTabela());
+        $this->pdf->SetDisplayMode('fullpage');
+        $this->pdf = new mPDF(['tempDir' => __DIR__ . '/tmp']);
+        ob_clean(); //limpa o objeto dos dados do pdf
+    }
+
+    /*
+    * Método para construir o arquivo PDF de Material de Serviço Vascular
+    */
+    public function GerarPDF_M_V_S(){
         set_time_limit(300); //seta o tempo limite de resposta para gerar o pdf
         ini_set("memory_limit", "600M"); //seta a quantidade de memória usada pelo servidor
         $this->pdf = new mPDF('utf-8', 'A4');
